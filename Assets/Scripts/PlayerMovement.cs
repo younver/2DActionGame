@@ -5,28 +5,36 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
     private Rigidbody2D rb;
-    private Vector2 moveAmount;
+    private Animator animator;
+
+    [SerializeField] private float speed;
+
+    private Vector2 moveVector;
 
     private void Awake()
     {
+        animator = this.GetComponent<Animator>();
         rb = this.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        //Input handling
+        // Get raw input for movement
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        
-        //Speed multiplier
-        moveAmount = moveInput.normalized * speed;
+
+        // Multiply normalized(sqrt(2x)||x) input by speed
+        moveVector = moveInput.normalized * speed;
+
+        // Run-Idle animation transition
+        animator.SetBool("isRunning", 
+            moveInput == Vector2.zero ? false : true);
     }
 
     private void FixedUpdate()
     {
-        //Moving the rigidbody
-        rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
+        // Move the rigidbody
+        rb.MovePosition(rb.position + moveVector * Time.fixedDeltaTime);
     }
 }
 
