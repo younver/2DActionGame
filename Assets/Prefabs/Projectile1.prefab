@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8458194873526769074}
   - component: {fileID: 3545805815269702104}
   - component: {fileID: 7281938072526954438}
+  - component: {fileID: 2023409448}
   m_Layer: 0
   m_Name: Projectile1
   m_TagString: Untagged
@@ -95,6 +96,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0220bdac1de775743863590a34141034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PierceAmount: 0
   _speed: 40
   _lifeTime: 0.7
+  _damage: 1
   _explosionParticle: {fileID: 2121000700259535120, guid: c107eddcd6d194f478c34308098d593b, type: 3}
+--- !u!61 &2023409448
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573226847107026931}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05955386, y: -0.29777002}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.7, y: 6.03}
+    newSize: {x: 4.7, y: 6.03}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.6156096, y: 3.6478405}
+  m_EdgeRadius: 0
