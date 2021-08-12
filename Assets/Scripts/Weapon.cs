@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Transform _shotPoint;
     [SerializeField] private float _shotDelay;
 
+
     private float _shotTime;
 
     private void Update()
