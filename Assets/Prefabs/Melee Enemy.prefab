@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948633703995109614}
   - component: {fileID: 4948633703995109601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meleeEnemy_leg_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948633704554353029}
   - component: {fileID: 4948633704554353028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meleeEnemy_chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948633704613650936}
   - component: {fileID: 4948633704613650939}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meleeEnemy_arm_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948633704980754978}
   - component: {fileID: 4948633704980754981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meleeEnemy_arm_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948633705045428070}
   - component: {fileID: 4948633705045428057}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meleeEnemy_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948633705695608403}
   - component: {fileID: 4948633705695608402}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meleeEnemy_leg_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 4257546340724609055}
   - component: {fileID: 6285880434523283726}
   - component: {fileID: 5932564760306681719}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Melee Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -611,3 +611,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 3
+  Speed: 20
+  TimeBetweenAttacks: 3
+  Damage: 1
+  Player: {fileID: 0}
+  _stopDistance: 10
+  _attackSpeed: 8
