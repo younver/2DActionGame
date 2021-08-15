@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator animator;
-
-    [SerializeField] private float speed;
-
     private Vector2 moveVector;
+
+
+    [SerializeField] private float _speed;
+    [SerializeField] private int _health;
 
     private void Awake()
     {
@@ -24,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         // Multiply normalized(sqrt(2x)||x) input by speed
-        moveVector = moveInput.normalized * speed;
+        moveVector = moveInput.normalized * _speed;
 
         // Run-Idle animation transition
         animator.SetBool("isRunning", 
@@ -35,6 +36,13 @@ public class PlayerMovement : MonoBehaviour
     {
         // Move the rigidbody
         rb.MovePosition(rb.position + moveVector * Time.fixedDeltaTime);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        this._health -= damage;
+        if (this._health <= 0)
+            Destroy(gameObject);
     }
 }
 
