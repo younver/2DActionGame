@@ -1364,7 +1364,7 @@ GameObject:
   - component: {fileID: 1861806241}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1419,7 +1419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2905238cba9a14e97cd87b804f261e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  _speed: 30
+  _health: 5
 --- !u!50 &1861806240
 Rigidbody2D:
   serializedVersion: 4
@@ -1484,11 +1485,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4948633706036637211, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.389321
+      value: 38.3
       objectReference: {fileID: 0}
     - target: {fileID: 4948633706036637211, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.38146544
+      value: 17.8
       objectReference: {fileID: 0}
     - target: {fileID: 4948633706036637211, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1522,9 +1523,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6285880434523283726, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
+    - target: {fileID: 5932564760306681719, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
+      propertyPath: Speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932564760306681719, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
+      propertyPath: Damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932564760306681719, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
+      propertyPath: _attackSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932564760306681719, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
+      propertyPath: _stopDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932564760306681719, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9bd952e0da82d0419f7d6fff331d311, type: 3}
