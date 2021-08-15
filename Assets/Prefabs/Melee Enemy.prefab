@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 4948633706036637210}
   - component: {fileID: 4257546340724609055}
   - component: {fileID: 6285880434523283726}
-  - component: {fileID: 6774124421551986038}
+  - component: {fileID: 5932564760306681719}
   m_Layer: 0
   m_Name: Melee Enemy
   m_TagString: Enemy
@@ -592,13 +592,13 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6774124421551986038
+--- !u!114 &5932564760306681719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4948633706036637208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 838c3747eb40b95499af9117495ce746, type: 3}
+  m_Script: {fileID: 11500000, guid: 5697ebc4b7f31c142a47d54cfc870eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 3
