@@ -612,8 +612,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 3
   Speed: 20
-  TimeBetweenAttacks: 3
   Damage: 1
+  AttackRange: 7
+  TimeBetweenAttacks: 3
+  AttackSpeed: 5
+  dropChance: 10
+  drops:
+  - {fileID: 3690377065278479614, guid: 5d9780e0ea832a444a4bf53cd0198b98, type: 3}
+  - {fileID: 9194127911244428913, guid: 329af81104f7c95499a771d3419bf214, type: 3}
   Player: {fileID: 0}
-  _stopDistance: 10
-  _attackSpeed: 8

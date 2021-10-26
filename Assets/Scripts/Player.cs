@@ -10,8 +10,10 @@ public class Player : MonoBehaviour
     private Vector2 moveVector;
 
 
-    [SerializeField] private float _speed;
-    [SerializeField] private int _health;
+    [SerializeField] private float speed;
+    [SerializeField] private int health;
+    [SerializeField] private Transform hand;
+
 
     private void Awake()
     {
@@ -25,7 +27,7 @@ public class Player : MonoBehaviour
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         // Multiply normalized(sqrt(2x)||x) input by speed
-        moveVector = moveInput.normalized * _speed;
+        moveVector = moveInput.normalized * speed;
 
         // Run-Idle animation transition
         animator.SetBool("isRunning", 
@@ -40,9 +42,15 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        this._health -= damage;
-        if (this._health <= 0)
+        this.health -= damage;
+        if (this.health <= 0)
             Destroy(gameObject);
+    }
+
+    public void ChangeWeapon(Weapon weapon){
+        Destroy(GameObject.FindGameObjectWithTag("Weapon"));
+        Debug.Log("Destroying " + GameObject.FindGameObjectWithTag("Weapon").name);
+        Instantiate(weapon, hand.position, hand.rotation, hand);
     }
 }
 

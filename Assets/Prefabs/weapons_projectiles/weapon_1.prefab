@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 957606702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 8902679496907373642}
   - component: {fileID: 8902679496907373653}
   - component: {fileID: 1286356785}
-  m_Layer: 0
-  m_Name: Weapon
-  m_TagString: Untagged
+  m_Layer: 6
+  m_Name: weapon_1
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 8902679496907373643}
   m_LocalRotation: {x: 0, y: 0, z: -0.020933786, w: 0.9997809}
   m_LocalPosition: {x: -8.64, y: -3.78, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8902679497538572178}
   - {fileID: 957606702}
@@ -103,7 +103,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 101
   m_Sprite: {fileID: 1518363075290452430, guid: c6b3c69870cfbe7479e5289e401f876e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8902679497538572178}
   - component: {fileID: 8902679497538572189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public int PierceAmount = 0;
-
-
-    [SerializeField] private float _speed;
-    [SerializeField] private float _lifeTime;
+    [Header("Attack")]
     [SerializeField] private int _damage;
+    [SerializeField] private int pierceAmount = 0;
+
+    [Header("Attributes")]
+    [SerializeField] private int _speed;
+    [SerializeField] private float _lifeTime;
+
+    [Header("Visuals")]
     [SerializeField] private GameObject _explosionParticle;
 
     private void Start()
@@ -35,8 +38,16 @@ public class Projectile : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             collision.GetComponent<Enemy>().TakeDamage(this._damage);
-            if (PierceAmount <= 0) DestroyProjectile();
-            else PierceAmount--;
+            if (pierceAmount <= 0)
+            {
+                DestroyProjectile();
+            }
+            else
+            {
+                Instantiate(_explosionParticle, transform.position,
+                    Quaternion.identity);
+                pierceAmount--;
+            }
         }
     }
 }
